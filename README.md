@@ -20,8 +20,7 @@ To sort an array "a" using any of the sorting algorithms:
 ```javascript
 var jslrs = require("js-longest-repeated-substring");
 
-var text = "[text-body]";
-var lrs = new jslrs.search(text);
-    
+var text = "ATCGATCGA$";
+console.log(jslrs.lrs(text)); // display ATCGA
 
 ```

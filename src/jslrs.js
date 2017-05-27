@@ -45,7 +45,7 @@ var jslrs = jslrs || {};
     
     jss.lrs = function(s) {
         var N = s.length;
-        a = [];
+        var a = [];
         for(var i = 0; i < N; ++i){
             a.push(s.substring(i, N));
         }
