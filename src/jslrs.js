@@ -43,6 +43,36 @@ var jslrs = jslrs || {};
         a[j] = temp;
     };
     
+    jss.lrs = function(s) {
+        var N = s.length;
+        a = [];
+        for(var i = 0; i < N; ++i){
+            a.push(s.substring(i, N));
+        }
+        
+        jss.threeWaysStringQuickSort(a);
+        
+        var result = "";
+        for(var i=0; i < N-1; ++i) {
+            var lcs = jss.lcs(a[i], a[i+1]);
+            if(lcs.length > result.length) {
+                result = lcs;
+            }
+        }
+        
+        return result;
+    };
+    
+    jss.lcs = function(s1, s2) {
+        var len = Math.min(s1.length, s2.length);
+        for(var i=0; i < len; ++i) {
+            if(jss._charAt(s1, i) != jss._charAt(s2, i)){
+                return s1.substring(0, i);
+            }
+        }
+        return s1.substring(0, len-1);
+    };
+    
 })(jslrs);
 
 if(module) {
