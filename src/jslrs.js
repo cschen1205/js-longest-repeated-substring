@@ -14,10 +14,10 @@ var jslrs = jslrs || {};
         var c = jss._charAt(a[lo], d);
         while(i <= gt) {
             var cmp = jss._charAt(a[i], d) - c;
-            if(c < 0) {
+            if(cmp < 0) {
                 jss.exchange(a, i++, lt++);
             } 
-            else if(c > 0) {
+            else if(cmp > 0) {
                 jss.exchange(a, i, gt--);
             }
             else {
@@ -26,7 +26,7 @@ var jslrs = jslrs || {};
         }
         
         jss._sort(a, lo, lt-1, d);
-        if(c >= 0) jss._sort(a, lt, gt, d+1);
+        jss._sort(a, lt, gt, d+1);
         jss._sort(a, gt+1, hi, d);
     };
     
@@ -34,7 +34,13 @@ var jslrs = jslrs || {};
         if(a.length <= d) {
             return -1;
         }  
-        return a.charAt(d);
+        return a.charCodeAt(d);
+    };
+    
+    jss.exchange = function(a, i, j){
+        var temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     };
     
 })(jslrs);
