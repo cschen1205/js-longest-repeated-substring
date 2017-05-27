@@ -1,6 +1,6 @@
 {
   "name": "js-longest-repeated-substring",
-  "version": "1.0.9",
+  "version": "1.0.1",
   "description": "Package implements longest repeated substring for finding the longest repeated string within a text body",
   "author": "Caishun Chen",
   "contributors": [
@@ -17,20 +17,16 @@
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "bin": {
-    "js-sort": "./src/jslrs.js"
+    "js-lrs": "./src/jslrs.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cschen1205/js-longest-repeated-substring.git"
   },
   "keywords": [
-    "symbol table", 
-    "balanced search tree", 
-    "binary search tree", 
-    "sorted map", 
-    "hilbert deletion", 
-    "red black tree", 
-    "left leaning red black tree"
+    "string manipulation", 
+    "string matching", 
+    "longest repeated substring"
   ],
   "dependencies": {
     
