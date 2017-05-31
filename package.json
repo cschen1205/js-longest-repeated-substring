@@ -1,6 +1,6 @@
 {
   "name": "js-longest-repeated-substring",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Package implements longest repeated substring for finding the longest repeated string within a text body",
   "author": "Caishun Chen",
   "contributors": [

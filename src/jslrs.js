@@ -75,6 +75,7 @@ var jslrs = jslrs || {};
     
 })(jslrs);
 
+var module = module || {};
 if(module) {
 	module.exports = jslrs;
 }
